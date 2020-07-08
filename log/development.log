@@ -1368,3 +1368,30 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 92ms (Views: 83.9ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/posts?utf8=%E2%9C%93&author=13&commit=Filter" for 71.185.39.134 at 2020-07-08 14:25:41 +0000
+Cannot render console from 71.185.39.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"13", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/gleeful-memory-0508/model-class-methods-reading-onl01-seng-pt-021020/app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ions_from_collection_for_select(Author.all, "id", "name"), i...
+...^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/gleeful-memory-0508/model-class-methods-reading-onl01-seng-pt-021020/app/views/posts/index.html.erb:16: syntax error, unexpected ',', expecting ')'
+...lect(Author.all, "id", "name"), include_blank: true );@outpu...
+...                              ^):
+  
+app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/posts/index.html.erb:16: syntax error, unexpected ',', expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.1ms)
